@@ -52,8 +52,7 @@ class UIHandler {
     }
 
     editMember(member){
-        let id = member[Object.keys(member)[0]];
-        let edit = document.getElementById(id).firstChild;
+        let edit = document.getElementById(member[Object.keys(member)[0]]).firstChild;
         delete member.memberId;
         let values = Object.values(member);
         let selected = edit;
@@ -67,7 +66,11 @@ class UIHandler {
     }
 
 
-    deleteMember(id) {    }
+    deleteMember(id) {
+        let del = document.getElementById(id);
+        del.parentNode.removeChild(del);
+        this.length -= 1;
+    }
 
 
 

@@ -24,5 +24,7 @@ function init() {
         'phone': '11223344'
     })
 
+    ui.deleteMember(1)
+
 }
 document.addEventListener('DOMContentLoaded',init,true)
