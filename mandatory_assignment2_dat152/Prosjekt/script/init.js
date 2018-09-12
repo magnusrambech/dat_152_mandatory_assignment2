@@ -16,5 +16,13 @@ function init() {
         'phone': '87655458'
     })
 
+    ui.editMember({
+        'memberId': 1,
+        'firstname': 'Ole',
+        'lastname':'Olsen' ,
+        'address': 'Olsenbakken',
+        'phone': '11223344'
+    })
+
 }
 document.addEventListener('DOMContentLoaded',init,true)

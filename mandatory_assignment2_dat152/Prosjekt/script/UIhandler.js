@@ -1,11 +1,11 @@
+'use strict';
 
 class UIHandler {
-
     constructor(){
         //Reference to the HTML object that is used to display the list of members.
         this.memberList = document.createElement("table");
         //Getter that returns the number of members displayed in the view.
-        this.length;
+        this.length = 0;
         /*
         //Setter that adds a callback to run when a Delete button is clicked.
         this.deleteMemberCallback;
@@ -27,9 +27,9 @@ class UIHandler {
 
             //create all "th" elements
             let j = 0;
-            let names = ["Firstname", "Lastname", "Address", "Phone", "", ""];
+            let data = ["Firstname", "Lastname", "Address", "Phone", "", ""];
             while (j < 6 ){
-                tr.appendChild(document.createElement("th")).innerHTML = names[j];
+                tr.appendChild(document.createElement("th")).innerHTML = data[j];
                 j++
             }
         }
@@ -48,12 +48,28 @@ class UIHandler {
         }
         tr.insertCell((4)).innerHTML = "<button id=delete" + id + " type='button'>Delete</button>";
         tr.insertCell((5)).innerHTML = "<button id=edit" + id + " type='button'>Edit</button>";
-        length = length+1;
+        this.length += 1;
     }
+
+    editMember(member){
+        let id = member[Object.keys(member)[0]];
+        let edit = document.getElementById(id).firstChild;
+        delete member.memberId;
+        let values = Object.values(member);
+        let selected = edit;
+
+        let j = 0;
+        while (j < values.length) {
+            selected.innerHTML = values[j];
+            selected = selected.nextSibling;
+            j++;
+        }
+    }
+
 
     deleteMember(id) {    }
 
-    editMember(member){    }
+
 
     getMember(member){    }
 }
