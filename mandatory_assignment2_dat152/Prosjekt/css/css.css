@@ -1,0 +1,19 @@
+body{
+    font-family: Tahoma;
+}
+th, td {display: block;
+    width: 150px;
+    padding: 5px;
+    float: left;
+    text-align: left;
+    height: 30px;
+}
+
+button {
+    background-color: #bbb;
+    display: block;
+    width: 100%;
+    background-color: mediumaquamarine;
+    color: white;
+    border-style: none;
+}
