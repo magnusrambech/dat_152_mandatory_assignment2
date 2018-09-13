@@ -35,7 +35,7 @@ class UIHandler {
         }
         //Error prevention alert
         if (document.getElementById(newMember[Object.keys(newMember)[0]]) != null){
-            alert("Error when trying to add member: A member with duplicate ID already exists. to edit an existing member, press the 'edit' button");
+            alert("Error member with duplicate ID already exists. to edit an existing member, press the 'edit' button");
             return;
         }
         //creates table rows with id that corresponds to netMember
@@ -71,16 +71,10 @@ class UIHandler {
         //finds the table row that corresponds to the members ID
         let selected = document.getElementById(member[Object.keys(member)[0]]).firstChild;
 
-
-
-
-
         delete member.memberId;
-
 
         //stores edited values into an object;
         let values = Object.values(member);
-
 
         //loops through the values and use them to replace old values of selected table row elements
         let j = 0;
@@ -90,8 +84,7 @@ class UIHandler {
             j++;
         }
     }
-
-
+    
     deleteMember(id) {
         //removes the element with the selected ID
         let del = document.getElementById(id);
@@ -105,8 +98,6 @@ class UIHandler {
         del.parentNode.removeChild(del);
         this.length -= 1;
     }
-
-
 
     getMember(id){
 
