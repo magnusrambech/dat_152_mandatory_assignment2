@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Mandatory Assignment 2</title>
+	<meta charset="ISO-8859-1">
+	<title>Mandatory Assignment 2</title>
+	<script type="text/javascript" src="script/config.js"></script>
+	<script type="text/javascript" src="script/ajax.js"></script>
 </head>
 <body>
 	
@@ -25,11 +27,51 @@
 		<li>Fresh AF styling</li>
 	</ol>
 	
-	<button id="AddMember" >Add Member</button>
+	
+	<h1> Team members</h1>
+	
+	
 	
 	<div id="memberlist"></div>
+	<input type="text" value="" id="memberId">
+    <button id="getMember" >Get Member</button>
+    <p id="memberInfo"></p>
+    <script>
+    "use strict";
+    {
+    	var memberIdElm = null
+    	
+    	function load() {
+    	  	document.getElementById("getMember").addEventListener("click",getMember,false)
+    	  	memberIdElm = document.getElementById("memberId")
+    	    }
+    	
+    	function viewResult(m){
+    		document.getElementById("memberInfo").textContent=m;
+    	}
+    	function getMember(e){
+    		let url = config.servicesPath + "/member"
+            const ajax = new AJAXConnection(url)
+            ajax.onsuccess = viewResult
+    	    ajax.get([memberIdElm.value])
+    		
+    	
+    		
+    	}
+    	function getAllMembers(){
+    		console.log("IM HERE BOIS")
+    		getMember()
+    	}
+    	 window.addEventListener("DOMContentLoaded",load,true)
+    	
+    }
+    
+    </script>
+    
+    
+    
+    <!--Scripts -->
     <script type="text/javascript" src="script/UIhandler.js"> </script>
-    <script type="text/javascript" src="script/init.js"> </script>
-	<script src="script/test.js"></script>
+    <script type="text/javascript" src="script/init.js"> </script> 
 </body>
 </html>
