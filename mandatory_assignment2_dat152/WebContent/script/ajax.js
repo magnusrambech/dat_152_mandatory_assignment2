@@ -17,7 +17,7 @@ class AJAXConnection {
         if (data) url += "?" + this._formatData(data)
 
         xmlhttprequest.open('GET', url, true)
-        xmlhttprequest.addEventListener("loadend",this._dataReceived.bind(this),true)
+        xmlhttprequest.addEventListener("loadend",this._showData.bind(this),true)
         if (this.onerror) xmlhttprequest.addEventListener("error",this.onerror.bind(this),true)
 
         // Sending request
@@ -47,7 +47,7 @@ class AJAXConnection {
 
         xmlhttprequest.open('PUT', url, true);
 
-        xmlhttprequest.addEventListener("loadend",this._dataReceived.bind(this),true)
+        xmlhttprequest.addEventListener("loadend",this._dataRecieved.bind(this),true)
         if (this.onerror) xmlhttprequest.addEventListener("error",this.onerror.bind(this),true)
 
         // Must specify document type with PUT data
@@ -74,14 +74,32 @@ class AJAXConnection {
         // Sending request
         xmlhttprequest.send(JSON.stringify(data));
     }
+    
+    
+    _showData(e){
+    	try{
+    		let xhr = e.target;
+    		let uiHandler = new UIHandler();
+    		uiHandler.addMember(xhr.responseText);
+    	}
+    	catch(e){
+    		console.log("error.." + e);
+    	}
+    }
+    
+    
 
     _dataReceived(e) {
         try {
             let xmlhttprequest = e.target // The XMLHttpRequest instance
             if (xmlhttprequest.status == 200) { // Got data
-                if (this.onsuccess) this.onsuccess(xmlhttprequest.responseText)
+                if (this.onsuccess){ 
+                	this.onsuccess(xmlhttprequest.responseText)
+                	}
             } else {
-                if (this.onerror) this.onerror(xmlhttprequest)
+                if (this.onerror){
+                	this.onerror(xmlhttprequest)
+                }
             }
         } catch(e) {
             if (this.onerror) this.onerror()

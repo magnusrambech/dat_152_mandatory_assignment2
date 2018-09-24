@@ -5,7 +5,7 @@ class UIHandler {
         //Reference to the HTML object that is used to display the list of members.
         this.memberList = document.createElement("table");
         //Getter that returns the number of members displayed in the view.
-        this.length = 0;
+        this.length = 10;
         /*
         //Setter that adds a callback to run when a Delete button is clicked.
         this.deleteMemberCallback;
@@ -123,4 +123,11 @@ class UIHandler {
         //returns the object containing all values
         return member;
     }
+    
+    
+    //AJAX
+    
+    
+    
+    
 }

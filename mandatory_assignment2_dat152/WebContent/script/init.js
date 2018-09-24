@@ -28,7 +28,16 @@ function init() {
 
     ui.deleteMember(2);
 
-    console.log(ui.getMember(1));
 
 }
-document.addEventListener('DOMContentLoaded',init,true)
+
+function initAjax(){
+	const ui = new UIHandler();
+	document.getElementById('memberlist').appendChild(ui.memberList);
+	let url = config.servicesPath;
+	const ajax = new AJAXConnection(url);	
+	
+	
+}
+
+document.addEventListener('DOMContentLoaded',initAjax,true)
