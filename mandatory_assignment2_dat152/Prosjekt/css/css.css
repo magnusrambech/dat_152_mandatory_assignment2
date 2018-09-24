@@ -17,3 +17,7 @@ button {
     color: white;
     border-style: none;
 }
+
+#AddMember {
+	width: 70px;
+}
