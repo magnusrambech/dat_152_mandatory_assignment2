@@ -3,8 +3,10 @@
 <head>
 	<meta charset="ISO-8859-1">
 	<title>Mandatory Assignment 2</title>
+	<link rel="stylesheet" type="text/css" href="css/css.css">
 	<script type="text/javascript" src="script/config.js"></script>
 	<script type="text/javascript" src="script/ajax.js"></script>
+	<script type="text/javascript" src="script/index.js" defer></script>
 </head>
 <body>
 	
@@ -27,12 +29,61 @@
 		<li>Fresh AF styling</li>
 	</ol>
 	
-	
+	<hr>
 	<h1> Team members</h1>
 	
 	
 	
 	<div id="memberlist"></div>
+	<hr>
+	
+	
+	<h2>Add a new member</h2>
+
+	<!-- Trigger/Open The Modal -->
+	<button id="myBtn">Open Modal</button>
+	
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+	
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	    <span class="close">&times;</span>
+	    <p>Add a new member</p>
+	
+	    <form>
+	    	<table>
+	    		<tr>
+	    			<td>First name</td>
+	    			<td><input type="text" name="firstName"></td>
+	    		</tr>
+	    		<tr>
+	    			<td>Last name</td>
+	    			<td><input type="text" name="lastName"></td>
+	    		</tr>
+	    		<tr>
+	    			<td>Address</td>
+	    			<td><input type="text" name="address"></td>
+	    		</tr>
+	    		<tr>
+	    			<td>Phone</td>
+	    			<td><input type="text" name="phone"></td>
+	    		</tr>
+	    	</table>
+	    </form>
+	    <button>Add member</button>
+	  </div>
+	
+	</div>
+	
+	
+	
+	
+	<hr>
+	
+	
+	
+	
 	<input type="text" value="" id="memberId">
     <button id="getMember" >Get Member</button>
     <p id="memberInfo"></p>
@@ -54,21 +105,16 @@
             const ajax = new AJAXConnection(url)
             ajax.onsuccess = viewResult
     	    ajax.get([memberIdElm.value])
-    		
     	
-    		
     	}
-    	function getAllMembers(){
-    		console.log("IM HERE BOIS")
-    		getMember()
-    	}
+    
     	 window.addEventListener("DOMContentLoaded",load,true)
     	
     }
     
     </script>
     
-    
+ 
     
     <!--Scripts -->
     <script type="text/javascript" src="script/UIhandler.js"> </script>
