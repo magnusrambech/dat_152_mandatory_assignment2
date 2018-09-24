@@ -16,10 +16,10 @@ class UIHandler {
 
     addMember(newMember) {
 
-        //builds table with thread and tbody if it hasn't been done before
-        if (document.getElementsByTagName("thread").length == 0) {
+        //builds table with thead and tbody if it hasn't been done before
+        if (document.getElementsByTagName("thead").length == 0) {
             //adds elements in correct order of hierarchy
-            let thread = document.createElement("thread");
+            let thread = document.createElement("thead");
             let tr = document.createElement("tr");
             thread.appendChild(tr);
             this.memberList.appendChild(thread);
