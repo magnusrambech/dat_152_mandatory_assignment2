@@ -80,7 +80,7 @@ class AJAXConnection {
     	try{
     		let xhr = e.target;
     		let uiHandler = new UIHandler();
-    		uiHandler.addMember(xhr.responseText);
+    		uiHandler.getMember(xhr.responseText);
     	}
     	catch(e){
     		console.log("error.." + e);
