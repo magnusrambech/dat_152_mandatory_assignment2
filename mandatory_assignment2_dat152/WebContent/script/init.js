@@ -1,3 +1,6 @@
+"use strict"
+var memberIdElm = null
+
 function init() {
 	
 	
@@ -37,6 +40,22 @@ function init() {
 
 }
 
+function load() {
+  	document.getElementById("getMember").addEventListener("click",getMember,false)
+  	memberIdElm = document.getElementById("memberId")
+    }
+
+function viewResult(m){
+	document.getElementById("memberInfo").textContent=m;
+}
+function getMember(e){
+	let url = config.servicesPath + "/member"
+    const ajax = new AJAXConnection(url)
+    ajax.onsuccess = viewResult
+    ajax.get([memberIdElm.value])
+
+}
+
 function initAjax(){
 	const ui = new UIHandler();
 	document.getElementById('memberlist').appendChild(ui.memberList);
@@ -46,5 +65,5 @@ function initAjax(){
 	// TODO: hent ut alle medlemmer ved bruk av 'ajax' (AJAXConnection) og vis de på siden ved bruk av 'ui' (UIHandler)
 	
 }
-
+window.addEventListener("DOMContentLoaded",load,true)
 document.addEventListener('DOMContentLoaded',initAjax,true)
