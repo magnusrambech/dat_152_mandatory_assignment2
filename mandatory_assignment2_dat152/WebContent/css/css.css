@@ -9,7 +9,9 @@ th, td {display: block;
     height: 30px;
 }
 
-
+hr{
+border-color:red;
+}
 
 button {
     background-color: #bbb;

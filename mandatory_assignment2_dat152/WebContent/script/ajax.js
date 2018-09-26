@@ -108,7 +108,9 @@ class AJAXConnection {
     	try{
     		let xhr = e.target;
     		let uiHandler = new UIHandler();
-    		uiHandler.getMember(xhr.responseText);
+    		let json = JSON.parse(xhr.responseText);
+    		json = json.member;
+    		uiHandler.getMember(json);
     	}
     	catch(e){
     		console.log("error.." + e);

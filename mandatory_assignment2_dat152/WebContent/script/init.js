@@ -18,7 +18,6 @@ function getMember(e){
     const ajax = new AJAXConnection(url)
     ajax.onsuccess = viewResult
     ajax.get([memberIdElm.value])
-
 }
 
 function addMember(e){
@@ -29,14 +28,14 @@ function addMember(e){
 	json.phone = document.getElementById("phone").value;
 	json.lastname = document.getElementById("lastName").value;
 	
-	
-	
-	console.log(json)
 	let url = config.servicesPath + "/member";
 	const ajax = new AJAXConnection(url);	
 	ajax.post(url, json);
 	ui.addMemberToList(json);
 
+}
+function updateMember(e){
+	
 }
 function deleteMember(id){
 	let url = config.servicesPath + "/member";
@@ -51,14 +50,11 @@ function initAjax(){
 	document.getElementById('memberlist').appendChild(ui.memberList);
 	let url = config.servicesPath + "/updates/-1";
 	this.ajaxGetAll(url);
-	
 }
 
 function ajaxGetAll(url){
 	const ajax = new AJAXConnection(url);	
 	ajax.getAll();
-
-
 }
 window.addEventListener("DOMContentLoaded",load,true)
 window.addEventListener('DOMContentLoaded',initAjax,true)

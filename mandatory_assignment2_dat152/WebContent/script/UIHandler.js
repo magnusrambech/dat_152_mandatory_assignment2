@@ -49,7 +49,23 @@ class UIHandler {
     
     getMember(member){
     	var elem = document.getElementById("memberInfo");
-    	elem.textContent = member;
+    	var stringContent="";
+    	
+    	let fname = document.createElement("p");fname.innerHTML = "First name: " + member.firstname;
+    	let lname = document.createElement("p");lname.innerHTML =  "Last name: " + member.lastname;
+    	let address = document.createElement("p");address.innerHTML =  "Address: " + member.address;
+    	let phone = document.createElement("p");phone.innerHTML =  "Phone: " + member.phone;
+    	
+    	//removes previous member before showing new one
+    	while (elem.firstChild) {
+    	    elem.removeChild(elem.firstChild);
+    	}
+    	
+    	elem.appendChild(fname);
+    	elem.appendChild(fname);
+    	elem.appendChild(lname);
+    	elem.appendChild(address);
+    	elem.appendChild(phone);
     }
     
     editMember(member){
