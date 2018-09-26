@@ -40,8 +40,11 @@ function updateMember(e){
 function deleteMember(id){
 	let url = config.servicesPath + "/member";
 	const ajax = new AJAXConnection(url);
-	ajax.del([id]);
-	ui.deleteMember(id);
+	if(window.confirm("Are you sure?")){
+		ajax.del([id]);
+		ui.deleteMember(id);
+	}
+	
 }
 
 function initAjax(){
