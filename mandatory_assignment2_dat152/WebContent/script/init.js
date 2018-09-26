@@ -31,7 +31,8 @@ function addMember(e){
 	let url = config.servicesPath + "/member";
 	const ajax = new AJAXConnection(url);	
 	ajax.post(url, json);
-	ui.addMemberToList(json);
+	
+	location.reload()
 
 }
 function updateMember(e){

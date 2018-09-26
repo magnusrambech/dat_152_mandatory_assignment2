@@ -45,6 +45,7 @@ class UIHandler {
         tr.insertCell(4).innerHTML = "<button id=delete" + id + " type='button' onclick='deleteMember("+ id +")'>Delete</button>";
         tr.insertCell(5).innerHTML = "<button id=edit" + id + " type='button'>Edit</button>";
         
+ 
     }
     
     getMember(member){
@@ -82,7 +83,6 @@ class UIHandler {
     }
     
     deleteMember(id){
-    	var elemToRemove = document. getElementById(id);
-    	elemToRemove.parentNode.removeChild(elemToRemove)
+    	location.reload();
     }
 }
