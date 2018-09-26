@@ -9,6 +9,8 @@ th, td {display: block;
     height: 30px;
 }
 
+
+
 button {
     background-color: #bbb;
     display: block;
@@ -61,4 +63,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
     text-decoration: none;
     cursor: pointer;
 }
-</style>
+
+tr:nth-child(even){
+	background-color: #f2f2f2;
+
+}

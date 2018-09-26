@@ -42,7 +42,7 @@ class UIHandler {
         	cell.innerHTML = newMember[value];
         	i++;
         }
-        tr.insertCell(4).innerHTML = "<button id=delete" + id + " type='button'>Delete</button>";
+        tr.insertCell(4).innerHTML = "<button id=delete" + id + " type='button' onclick='deleteMember("+ id +")'>Delete</button>";
         tr.insertCell(5).innerHTML = "<button id=edit" + id + " type='button'>Edit</button>";
         
     }

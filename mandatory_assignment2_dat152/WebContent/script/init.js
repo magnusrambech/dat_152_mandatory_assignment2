@@ -32,10 +32,12 @@ function addMember(e){
 	let url = config.servicesPath + "/member";
 	const ajax = new AJAXConnection(url);	
 	ajax.post(url, json);
-	
-	
-	
-	
+
+}
+function deleteMember(id){
+	let url = config.servicesPath + "/member";
+	const ajax = new AJAXConnection(url);
+	ajax.del([id]);
 }
 
 function initAjax(){
