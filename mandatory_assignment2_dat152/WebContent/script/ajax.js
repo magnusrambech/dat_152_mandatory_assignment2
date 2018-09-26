@@ -75,6 +75,28 @@ class AJAXConnection {
         xmlhttprequest.send(JSON.stringify(data));
     }
     
+    getAll(pathArray,data) {
+        let xmlhttprequest = new XMLHttpRequest()
+
+        // If given, add path to the URL.
+        let url = this._url + this._convertToPath(pathArray)
+
+        // If given, add GET parameters.
+        if (data) url += "?" + this._formatData(data)
+
+        xmlhttprequest.open('GET', url, true)
+        xmlhttprequest.addEventListener("loadend",this._returnData.bind(this),true)
+        if (this.onerror) xmlhttprequest.addEventListener("error",this.onerror.bind(this),true)
+        // Sending request
+        xmlhttprequest.send(null);
+    }
+    
+    _returnData(e){
+    	let xhr = e.target;
+    	console.log(xhr.responseText)
+    	
+    }
+    
     
     _showData(e){
     	try{

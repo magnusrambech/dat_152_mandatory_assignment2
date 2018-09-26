@@ -4,8 +4,8 @@
 	<meta charset="ISO-8859-1">
 	<title>Mandatory Assignment 2</title>
 	<link rel="stylesheet" type="text/css" href="css/css.css">
-	<script type="text/javascript" src="script/config.js"></script>
 	<!--Scripts -->
+	<script type="text/javascript" src="script/config.js"></script>
     <script type="text/javascript" src="script/UIHandler.js"> </script>
     <script type="text/javascript" src="script/init.js"> </script> 
 	<script type="text/javascript" src="script/ajax.js"></script>
@@ -58,23 +58,24 @@
 	    	<table>
 	    		<tr>
 	    			<td>First name</td>
-	    			<td><input type="text" name="firstName"></td>
+	    			<td><input type="text" id="firstName"></td>
 	    		</tr>
 	    		<tr>
 	    			<td>Last name</td>
-	    			<td><input type="text" name="lastName"></td>
+	    			<td><input type="text" id="lastName"></td>
 	    		</tr>
 	    		<tr>
 	    			<td>Address</td>
-	    			<td><input type="text" name="address"></td>
+	    			<td><input type="text" id="address"></td>
 	    		</tr>
 	    		<tr>
 	    			<td>Phone</td>
-	    			<td><input type="text" name="phone"></td>
+	    			<td><input type="text" id="phone"></td>
 	    		</tr>
 	    	</table>
 	    </form>
-	    <button>Add member</button>
+	    <button id="addMemberBtn">Add member</button>
+	    <button id="editMemberBtn">Edit member</button>
 	  </div>
 	
 	</div>
@@ -92,32 +93,7 @@
     <p id="memberInfo"></p>
     
     <!-- Init script. Move this to init.js instead, script tags are ugly af -->
-    <script>
-    "use strict";
-    {
-    	var memberIdElm = null
-    	
-    	function load() {
-    	  	document.getElementById("getMember").addEventListener("click",getMember,false)
-    	  	memberIdElm = document.getElementById("memberId")
-    	    }
-    	
-    	function viewResult(m){
-    		document.getElementById("memberInfo").textContent=m;
-    	}
-    	function getMember(e){
-    		let url = config.servicesPath + "/member"
-            const ajax = new AJAXConnection(url)
-            ajax.onsuccess = viewResult
-    	    ajax.get([memberIdElm.value])
-    	
-    	}
-    
-    	 window.addEventListener("DOMContentLoaded",load,true)
-    	
-    }
-    
-    </script>
+ 
     
  
     
