@@ -1,10 +1,10 @@
 function init() {
 	
 	
-	//  IKKE AJAX 
-	//     |
-	//     v
-	//
+//	  IKKE AJAX 
+//	     |
+//	     v
+//	
 //    const ui = new UIHandler()
 //    document.getElementById('memberlist').appendChild(ui.memberList);
 //
