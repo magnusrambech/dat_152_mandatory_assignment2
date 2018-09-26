@@ -35,24 +35,22 @@ function addMember(e){
 	
 	
 	
+	
 }
 
 function initAjax(){
 	let reachedEnd = false;
+	let ui = new UIHandler();
 	let curr = 1;
 	document.getElementById('memberlist').appendChild(ui.memberList);
-	let url = config.servicesPath + "/member";
+	let url = config.servicesPath + "/updates/-1";
+	this.ajaxGetAll(url);
+	
+}
+
+function ajaxGetAll(url){
 	const ajax = new AJAXConnection(url);	
-	
-	// TODO: hent ut alle medlemmer ved bruk av 'ajax' (AJAXConnection) og vis de på siden ved bruk av 'ui' (UIHandler)
-	
-	for(let i=1; i<100; i++){
-		console.log("CURR: "+ i)
-		ajax.getAll([i]);
-		
-	}
-		
-	
+	ajax.getAll();
 }
 window.addEventListener("DOMContentLoaded",load,true)
 window.addEventListener('DOMContentLoaded',initAjax,true)

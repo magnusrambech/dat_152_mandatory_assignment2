@@ -76,6 +76,7 @@ class AJAXConnection {
     }
     
     getAll(pathArray,data) {
+    	
         let xmlhttprequest = new XMLHttpRequest()
 
         // If given, add path to the URL.
@@ -83,6 +84,7 @@ class AJAXConnection {
 
         // If given, add GET parameters.
         if (data) url += "?" + this._formatData(data)
+         	
 
         xmlhttprequest.open('GET', url, true)
         xmlhttprequest.addEventListener("loadend",this._returnData.bind(this),true)
@@ -92,8 +94,12 @@ class AJAXConnection {
     }
     
     _returnData(e){
+    	let ui = new UIHandler();
     	let xhr = e.target;
-    	console.log(xhr.responseText)
+    	let json = JSON.parse(xhr.response);
+    	for(var mem in json.newMembers){
+    		ui.addMemberToList(json.newMembers[mem]);
+    	}
     	
     }
     

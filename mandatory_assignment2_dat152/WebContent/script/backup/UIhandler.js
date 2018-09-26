@@ -4,6 +4,7 @@ class UIHandler {
     constructor(){
         //Reference to the HTML object that is used to display the list of members.
         this.memberList = document.createElement("table");
+        
         //Getter that returns the number of members displayed in the view.
         this.length = 10;
         /*
