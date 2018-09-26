@@ -57,6 +57,7 @@ class UIHandler {
     }
     
     deleteMember(id){
-    	console.log("placeholder 3...")
+    	var elemToRemove = document. getElementById(id);
+    	elemToRemove.parentNode.removeChild(elemToRemove)
     }
 }

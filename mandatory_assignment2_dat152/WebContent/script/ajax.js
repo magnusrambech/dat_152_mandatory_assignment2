@@ -87,13 +87,13 @@ class AJAXConnection {
          	
 
         xmlhttprequest.open('GET', url, true)
-        xmlhttprequest.addEventListener("loadend",this._returnData.bind(this),true)
+        xmlhttprequest.addEventListener("loadend",this._returnAllData.bind(this),true)
         if (this.onerror) xmlhttprequest.addEventListener("error",this.onerror.bind(this),true)
         // Sending request
         xmlhttprequest.send(null);
     }
     
-    _returnData(e){
+    _returnAllData(e){
     	let ui = new UIHandler();
     	let xhr = e.target;
     	let json = JSON.parse(xhr.response);
@@ -133,6 +133,7 @@ class AJAXConnection {
             if (this.onerror) this.onerror()
         }
     }
+    
 
     _formatData(data) {
         let dataString="";
