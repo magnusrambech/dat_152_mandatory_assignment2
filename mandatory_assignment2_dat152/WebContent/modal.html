@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/css.css">
+<script type="text/javascript" src="script/modal.js" defer></script>
+</head>
+<body>
+
+<h2>Add a new member</h2>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Add member</button>
+
+
+
+<!-- The Modal -->
+ <div id="myModal" class="modal">
+
+ 	<div class="modal-content">
+	    <span class="close">&times;</span>
+	    <p>Add a new member</p>
+	
+	    <form>
+	    	<table>
+	    		<tr>
+	    			<td>First name</td>
+	    			<td><input type="text" name="firstName"></td>
+	    		</tr>
+	    		<tr>
+	    			<td>Last name</td>
+	    			<td><input type="text" name="lastName"></td>
+	    		</tr>
+	    		<tr>
+	    			<td>Address</td>
+	    			<td><input type="text" name="address"></td>
+	    		</tr>
+	    		<tr>
+	    			<td>Phone</td>
+	    			<td><input type="text" name="phone"></td>
+	    		</tr>
+	    	</table>
+	    </form>
+	    <button id="addMember">Add member</button>
+	    <button id="editMember">Edit member</button>
+	  </div>
+	</div>
+
+</body>
+</html>
