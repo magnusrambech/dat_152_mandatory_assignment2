@@ -26,8 +26,8 @@ window.onclick = function(event) {
     }
 }
 
-var addButton = document.getElementById("addMember");
-var editButton = document.getElementById("editMember");
+var addButton = document.getElementById("addMemberBtn");
+var editButton = document.getElementById("editMemberBtn");
 
 addButton.onclick = function(){
 	console.log("Funker");

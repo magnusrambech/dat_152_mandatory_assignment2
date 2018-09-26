@@ -62,11 +62,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
     cursor: pointer;
 }
 
-#addMember{
+#addMemberBtn{
     display: inline-block;
 }
 
-#editMember{
+#editMemberBtn{
     display: inline-block;
 }
 </style>
