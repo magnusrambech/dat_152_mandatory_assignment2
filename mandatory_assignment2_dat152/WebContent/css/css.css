@@ -61,4 +61,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
     text-decoration: none;
     cursor: pointer;
 }
+
+#addMember{
+    display: inline-block;
+}
+
+#editMember{
+    display: inline-block;
+}
 </style>
