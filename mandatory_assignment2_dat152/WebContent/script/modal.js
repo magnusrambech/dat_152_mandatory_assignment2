@@ -15,8 +15,8 @@ btn.onclick = function() {
 }
 
 // Modulen lukkes når brukeren trykker på X.
-span.onclick = function() {
-    modal.style.display = "none";
+span.onclick = function(){
+	modal.style.display="none";
 }
 
 // Modulen lukkes når brukeren klikker utenfor modulen.
@@ -26,3 +26,13 @@ window.onclick = function(event) {
     }
 }
 
+var addButton = document.getElementById("addMemberBtn");
+var editButton = document.getElementById("editMemberBtn");
+
+addButton.onclick = function(){
+	console.log("Funker");
+}
+
+editButton.onclick = function(){
+	console.log("Funker");
+}

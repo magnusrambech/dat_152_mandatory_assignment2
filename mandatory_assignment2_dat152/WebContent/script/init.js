@@ -1,3 +1,4 @@
+
 "use strict"
 var memberIdElm = null
 
@@ -52,7 +53,16 @@ function initAjax(){
 
 function ajaxGetAll(url){
 	const ajax = new AJAXConnection(url);	
+<<<<<<< HEAD
 	ajax.getAll();
+=======
+	
+	// TODO: hent ut alle medlemmer ved bruk av 'ajax' (AJAXConnection) og vis de på siden ved bruk av 'ui' (UIHandler)
+
+	}
+		
+	
+>>>>>>> branch 'master' of https://github.com/magnusrambech/dat_152_mandatory_assignment2
 }
 window.addEventListener("DOMContentLoaded",load,true)
 window.addEventListener('DOMContentLoaded',initAjax,true)
