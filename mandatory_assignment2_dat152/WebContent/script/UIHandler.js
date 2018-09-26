@@ -53,7 +53,7 @@ class UIHandler {
     }
     
     editMember(member){
-    	console.log("placeholder 2...");
+    	console.log("placeholder 2..");
     }
     
     deleteMember(id){
