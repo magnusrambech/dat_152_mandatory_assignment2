@@ -40,7 +40,7 @@ class UIHandler {
         for(var value in newMember){
         	let cell = tr.insertCell(i);
         	cell.innerHTML = newMember[value];
-        	i++;
+        	i++; 
         }
         tr.insertCell(4).innerHTML = "<button id=delete" + id + " type='button' onclick='deleteMember("+ id +")'>Delete</button>";
         tr.insertCell(5).innerHTML = "<button id=edit" + id + " type='button'>Edit</button>";
