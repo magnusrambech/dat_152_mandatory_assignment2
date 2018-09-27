@@ -20,6 +20,7 @@ class AJAXConnection {
         xmlhttprequest.addEventListener("loadend",this._showData.bind(this),true)
         if (this.onerror) xmlhttprequest.addEventListener("error",this.onerror.bind(this),true)
 
+      
         // Sending request
         xmlhttprequest.send(null);
     }
@@ -76,7 +77,7 @@ class AJAXConnection {
     }
     
     getAll(pathArray,data) {
-    	
+    
         let xmlhttprequest = new XMLHttpRequest()
 
         // If given, add path to the URL.

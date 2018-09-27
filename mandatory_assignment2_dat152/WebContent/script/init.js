@@ -5,20 +5,22 @@ let ui = new UIHandler();
 
 function load() {
   	document.getElementById("getMember").addEventListener("click",getMember,false)
-  	memberIdElm = document.getElementById("memberId")
   	document.getElementById('addMemberBtn').addEventListener("click",addMember,false)
   	document.getElementById('saveMemberBtn').addEventListener("click",updateMember,false)
-    }
+  	memberIdElm = document.getElementById("memberIdInput")    
+}
 
 function viewResult(m){
 	document.getElementById("memberInfo").textContent=m;
 }
 
 function getMember(e){
+	
 	let url = config.servicesPath + "/member"
     const ajax = new AJAXConnection(url)
     ajax.onsuccess = viewResult
-    ajax.get([memberIdElm.value])
+    console.log(memberIdElm.value);
+    ajax.get([(memberIdElm.value)])
 }
 
 function addMember(e){
