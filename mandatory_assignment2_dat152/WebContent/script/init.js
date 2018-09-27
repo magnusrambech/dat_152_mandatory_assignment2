@@ -15,11 +15,9 @@ function viewResult(m){
 }
 
 function getMember(e){
-	
 	let url = config.servicesPath + "/member"
     const ajax = new AJAXConnection(url)
     ajax.onsuccess = viewResult
-    console.log(memberIdElm.value);
     ajax.get([(memberIdElm.value)])
 }
 
