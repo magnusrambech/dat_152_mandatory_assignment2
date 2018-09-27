@@ -44,7 +44,7 @@ class UIHandler {
         }
         
         tr.insertCell(4).innerHTML = "<button id=delete" + id + " type='button' onclick='deleteMember("+ id +")'>Delete</button>";
-        tr.insertCell(5).innerHTML = "<button id=edit" + id + " type='button' class='open edit' onclick=editMember("+ id +")>Edit</button>";
+        tr.insertCell(4).innerHTML = "<button id=edit" + id + " type='button' class='open edit' onclick=editMember("+ id +")>Edit</button>";
         
  
     }
