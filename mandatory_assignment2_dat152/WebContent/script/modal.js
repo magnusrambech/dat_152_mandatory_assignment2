@@ -1,5 +1,3 @@
-
-
 // Henter modulen
 var modal = document.getElementById('myModal');
 
