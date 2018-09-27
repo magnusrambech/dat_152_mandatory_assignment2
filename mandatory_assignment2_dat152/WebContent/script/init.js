@@ -28,15 +28,21 @@ function addMember(e){
 	json.phone = document.getElementById("phone").value;
 	json.lastname = document.getElementById("lastName").value;
 	
-	let url = config.servicesPath + "/member";
-	const ajax = new AJAXConnection(url);	
-	ajax.post(url, json);
+	//makes sure none of the fields are left blank
+	if(json.firstname!="" && json.lastname!= "" && json.phone!="" && json.address!=""){
+		let url = config.servicesPath + "/member";
+		const ajax = new AJAXConnection(url);	
+		ajax.post(url, json);
+		location.reload();
+	}
+	else{
+		window.alert("Please fill out all fields in the form.");
+	}
 	
-	location.reload()
 
 }
 function updateMember(e){
-	
+	//TODO
 }
 function deleteMember(id){
 	let url = config.servicesPath + "/member";
