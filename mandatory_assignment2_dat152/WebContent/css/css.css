@@ -14,6 +14,9 @@ border-color:red;
 }
 
 button {
+	box-shadow: 2px 5px 5px #888888;
+	border-radius: 5px;
+	height: 30px;
     background-color: #bbb;
     display: block;
     background-color: mediumaquamarine;
@@ -71,7 +74,10 @@ tr:nth-child(even){
 	background-color: #f2f2f2;
 
 }
-=======
+
+#getMember{
+	margin-top: 10px;
+}
 #addMemberBtn{
     display: inline-block;
 }
@@ -79,5 +85,3 @@ tr:nth-child(even){
 #editMemberBtn{
     display: inline-block;
 }
-</style>
->>>>>>> branch 'master' of https://github.com/magnusrambech/dat_152_mandatory_assignment2
