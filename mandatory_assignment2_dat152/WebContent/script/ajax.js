@@ -46,7 +46,7 @@ class AJAXConnection {
         let url = this._url + this._convertToPath(pathArray)
 
         xmlhttprequest.open('PUT', url, true);
-
+        
         xmlhttprequest.addEventListener("loadend",this._dataRecieved.bind(this),true)
         if (this.onerror) xmlhttprequest.addEventListener("error",this.onerror.bind(this),true)
 

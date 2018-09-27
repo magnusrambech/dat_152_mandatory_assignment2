@@ -42,8 +42,9 @@ class UIHandler {
         	cell.innerHTML = newMember[value];
         	i++; 
         }
+        
         tr.insertCell(4).innerHTML = "<button id=delete" + id + " type='button' onclick='deleteMember("+ id +")'>Delete</button>";
-        tr.insertCell(5).innerHTML = "<button id=edit" + id + " type='button'>Edit</button>";
+        tr.insertCell(5).innerHTML = "<button id=edit" + id + " type='button' class='open edit' onclick=editMember("+ id +")>Edit</button>";
         
  
     }
@@ -78,8 +79,14 @@ class UIHandler {
     	
     }
     
+    showEdit(id){
+    	let member = document.getElementById(id);
+    	showModal(id, member.firstChild.innerHTML, member.firstChild.nextSibling.innerHTML, member.firstChild.nextSibling.nextSibling.innerHTML, member.firstChild.nextSibling.nextSibling.nextSibling.innerHTML);
+    	
+    }
+    
     editMember(member){
-    	console.log("placeholder 2..");
+    	
     }
     
     deleteMember(id){

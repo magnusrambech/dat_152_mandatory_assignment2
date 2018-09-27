@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="ISO-8859-1">
+	<meta charset="UTF-8">
 	<title>Mandatory Assignment 2</title>
 	<link rel="stylesheet" type="text/css" href="css/css.css">
 	<!--Scripts -->
@@ -10,6 +10,7 @@
     <script type="text/javascript" src="script/init.js"> </script> 
 	<script type="text/javascript" src="script/ajax.js"></script>
 	<script type="text/javascript" src="script/modal.js" defer></script>
+	<script type="text/javascript" src="script/editModal.js" defer></script>
 </head>
 <body>
 	
@@ -78,6 +79,42 @@
 	  </div>
 	
 	</div>
+
+    <div id="editModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Edit member</p>
+
+            <form>
+                <table>
+                	<tr>
+                        <td>Id</td>
+                        <td id="memberId"></td>
+                    </tr>
+                    <tr>
+                        <td>First name</td>
+                        <td><input type="text" id="newFirstName"></td>
+                    </tr>
+                    <tr>
+                        <td>Last name</td>
+                        <td><input type="text" id="newLastName"></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td><input type="text" id="newAddress"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td><input type="text" id="newPhone"></td>
+                    </tr>
+                </table>
+            </form>
+            <button id="saveMemberBtn">Save changes</button>
+        </div>
+
+    </div>
 	
 	
 	<hr>
