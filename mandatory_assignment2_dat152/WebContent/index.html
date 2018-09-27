@@ -14,38 +14,10 @@
 </head>
 <body>
 	
-	<h1>Mandatory Assignment 2</h1>
-	
-	
-	<h2>Gruppemedlemmer</h2>
-	<ul>
-		<li>Magnus Rambech</li>
-		<li>Tord Kvifte</li>
-		<li>Thomas Rognes</li>
-		<li>Aryan Gharshi</li>
-	</ul>
-	
-	
-	<h2>TODO:</h2>
-	<ol>
-		<li>Working connection to Mservices using ajax.js <strong>IN PROGRESS</strong></li>
-		<li>Show existing members on page</li>
-		<li>Add member</li>
-	</ol>
-	
-	<hr>
-	<h1> Team members</h1>
-	
-	
+	<h1 id="header">ASSIGNMENT 2</h1>
+	<h2> Team members </h2>
 	<!-- List of members -->
 	<div id="memberlist"></div>
-	<hr>
-	
-	
-	<h2>Add a new member</h2>
-
-	<!-- Trigger/Open The Modal -->
-	<button id="myBtn">Open Modal</button>
 	
 	<!-- The Modal -->
 	<div id="myModal" class="modal">
@@ -115,20 +87,24 @@
         </div>
 
     </div>
+
+
+    <div id="search">
+        <div>
+            <!-- Get member by member ID -->
+	        <input type="text" id="memberIdInput" placeholder="Member ID">
+            <button id="getMember" >Search</button>
+            <!-- Trigger/Open The Modal -->
+            <button id="myBtn">Add Member</button>
+        </div>
+        <div id="memberInfo"></div>
+    </div>
+
+    <footer>
+    	<h2>Created By:</h2>
+   		<p>Magnus Rambech | Tord Kvifte | Thomas Rognes | Aryan Gharshi</p>
+    </footer>
 	
-	
-	<hr>
-	
-	
-	<!-- Get member by member ID -->
-	<input type="text" id="memberIdInput">
-    <button id="getMember" >Get Member</button>
-    <div id="memberInfo"></div>
-    
-    <hr>
-    
- 
-    
     
 </body>
 </html>

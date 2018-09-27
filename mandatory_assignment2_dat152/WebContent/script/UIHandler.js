@@ -14,19 +14,12 @@ class UIHandler {
         this.memberList.appendChild(thead);
         this.memberList.appendChild(tbody);
     
-        let data = ["Firstname", "Address", "Phone", "Lastname", "", ""];
+        let data = ["Address", "Firstname", "Lastname", "Phone", "", ""];
         for(var j=0; j < data.length; j++ ){
             tr.appendChild(document.createElement("th")).innerHTML = data[j];
         }
-       
     }
-    
-    
-    
-    
-    
-    
-    
+
     addMemberToList(newMember){
     	
     	 //creates table rows with id that corresponds to netMember
@@ -46,7 +39,6 @@ class UIHandler {
         tr.insertCell(4).innerHTML = "<button id=delete" + id + " type='button' onclick='deleteMember("+ id +")'>Delete</button>";
         tr.insertCell(4).innerHTML = "<button id=edit" + id + " type='button' class='open edit' onclick=editMember("+ id +")>Edit</button>";
         
- 
     }
     
     getMember(member){
@@ -75,14 +67,11 @@ class UIHandler {
         	elem.appendChild(address);
         	elem.appendChild(phone);
     	}
-    	
-    	
     }
     
     showEdit(id){
     	let member = document.getElementById(id);
     	showModal(id, member.firstChild.innerHTML, member.firstChild.nextSibling.innerHTML, member.firstChild.nextSibling.nextSibling.innerHTML, member.firstChild.nextSibling.nextSibling.nextSibling.innerHTML);
-    	
     }
     
     editMember(member){

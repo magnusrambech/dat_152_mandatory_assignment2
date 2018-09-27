@@ -1,7 +1,23 @@
 body{
     font-family: Tahoma;
+    margin: 0px;
+    padding: 0px;
+
 }
-th, td {display: block;
+h2 {
+  text-align: center !important;
+  font-weight: normal;
+}
+#header{
+    display: block;
+    color: white;
+    background-color: #2EE59D;
+    padding: 10px;
+    margin: 0 0 40px;
+    box-shadow: 0 10px 6px -6px #e1e1e1;
+}
+th, td {
+    display: block;
     width: 150px;
     padding: 5px;
     float: left;
@@ -9,24 +25,54 @@ th, td {display: block;
     height: 30px;
 }
 
+#search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
 hr{
-border-color:red;
+border-color:black;
 }
 
 button {
-	box-shadow: 2px 5px 5px #888888;
-	border-radius: 5px;
-	min-width: 60px;
-	height: 30px;
-    background-color: #bbb;
-    display: block;
-    background-color: mediumaquamarine;
-    color: white;
-    border-style: none;
+    width: 120px;
+    height: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #ceffea;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+button:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
 }
 
 #addMember{
     width: 70px;
+}
+
+#memberlist {
+    display: flex;
+    justify-content: center;
+}
+
+#memberTable {
+    box-shadow: 0 10px 6px -6px #c0c0c0;
+    border: 1px solid #aaaaaa;
 }
 
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -75,6 +121,15 @@ tr:nth-child(even){
 
 }
 
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #f2f2f2;
+    box-shadow: inset 0 0 10px #c0c0c0;
+}
 #getMember{
 	margin-top: 10px;
 }
@@ -84,4 +139,14 @@ tr:nth-child(even){
 
 #editMemberBtn{
     display: inline-block;
+}
+
+#memberIdInput{
+    position: relative;
+    margin-right: 10px;
+    height: 25px;
+    width: 200px;
+    top: 2px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);  
+    border: thin solid #aaaaaa;
 }
